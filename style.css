@@ -1,0 +1,90 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base{
+    :root{
+        --white:0 0% 100%;
+        --white-d:11 100% 99%;
+        --bg-d:255 255 255;
+        --orange:1 100% 65%;
+        --pinkie:333 73% 51%;
+        --gray:0 0% 96%;
+        --blue:235 100% 69%;
+        --grayish:210 13% 94%;
+
+
+
+    }
+    *{
+        padding:0;
+        margin:0;
+        box-sizing: border-box;
+    }
+    .top-home-section{
+        background-image:url("./images/bottomBg.svg"),url("./images/bg-top.svg");
+        background-position: bottom, top ;
+        background-size:20% 1px, cover 80%;
+        background-repeat: no-repeat, no-repeat;
+        height: 400px;
+    
+    }
+    .instagram {
+        background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%); 
+        background: -webkit-radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);    
+
+    }   
+    .subscription-section{
+        background-image:url("./images/bottomBg.svg"),url("./images/bg-top.svg");
+        background-position: bottom, top ;
+        background-size:20% 1px, cover 80%;
+        background-repeat: no-repeat, no-repeat;
+    }
+}
+@layer components{
+    .graph-text{
+       @apply text-xs  ; 
+    }
+    .graph-horizontal-div{
+        @apply border-none bg-grayline h-[1px] mb-8 w-full;
+    }
+    .graph-stick{
+        @apply border-none w-[7px] bg-bluish rounded-t-full rounded-b-full;
+    }
+    .influence-colored{
+        @apply text-sm  tracking-[3px] font-semibold;
+    }
+    .influence-flex{
+        @apply flex flex-row justify-around flex-wrap mx-auto
+    }
+    .influence-heading{
+        @apply text-3xl py-4 font-semibold font-fontPoppins;
+    }
+    .influence-content{
+        @apply leading-[2] w-[44ch] text-[#426666];
+    }
+    .read-more{
+        @apply text-sm flex flex-row mt-8 flex-nowrap gap-2 items-center font-medium text-[#426666];
+    }
+    .stats-text{
+        @apply text-[#7B9292] text-sm;
+    }
+    .stats-spam{
+        @apply block mb-4 text-whitee font-semibold text-[2.5rem] text-left;
+    }
+    .image-div-heading{
+        @apply font-fontPoppins font-semibold mb-4
+    }
+    .image-stat{
+        @apply text-[#ADADBA] text-left font-medium text-[10px]
+    }
+    .image-span{
+        @apply mb-2  text-2xl  text-[#1F1F26] block font-semibold font-fontPoppins
+    }
+    .image-learn-more{
+        @apply text-[#B33CDB] font-medium flex flex-row flex-nowrap items-center gap-2
+    }
+    .stats-division{
+        @apply p-6 bg-whitee absolute w-[19.5%] mt-[-5rem] shadow-lg
+    }
+}
